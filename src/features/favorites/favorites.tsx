@@ -43,7 +43,7 @@ const Favorites: React.FC = () => {
   return (
     <div className="favorites">
       {favoritesStore.favorites.length === 0 ? (
-        <Typography variant="h6" sx={{ textAlign: "center", marginTop: 3 }}>
+        <Typography variant="h6" sx={{ textAlign: "center", marginTop: 3, width: 1456}}>
           Favorites are empty ;(
         </Typography>
       ) : (
