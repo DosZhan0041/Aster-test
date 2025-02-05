@@ -15,7 +15,6 @@ class FavoritesStore {
   }
 
   addFavorite(movie: Movie) {
-    // Проверяем, если фильм уже есть в избранных
     const isFavorite = this.favorites.some((fav) => fav.imdbID === movie.imdbID);
     
     if (!isFavorite) {

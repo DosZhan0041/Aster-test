@@ -13,13 +13,11 @@ const MovieDetailPage: React.FC = () => {
       movieDetailStore.fetchMovieDetails(imdbID);
     }
 
-    // Восстановление тайм-кода при загрузке страницы
     const savedTime = localStorage.getItem(`movie-${imdbID}-time`);
     if (savedTime && videoRef.current) {
       videoRef.current.currentTime = parseFloat(savedTime);
     }
 
-    // Сохранение тайм-кода при изменении времени видео
     const handleTimeUpdate = () => {
       if (videoRef.current) {
         localStorage.setItem(`movie-${imdbID}-time`, videoRef.current.currentTime.toString());
@@ -47,8 +45,8 @@ const MovieDetailPage: React.FC = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "100vh", // Это заставит контейнер занимать всю высоту экрана
-          textAlign: "center", // Чтобы текст был по центру
+          height: "100vh", 
+          textAlign: "center", 
         }}
       >
         <Typography variant="h4">Loading...</Typography>

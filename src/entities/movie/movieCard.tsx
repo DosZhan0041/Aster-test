@@ -5,7 +5,6 @@ import favoritesStore from "../../app/store/favoriteStore";
 import { Movie } from "../../app/store/moviesStore";
 import { Link } from "react-router-dom";
 
-// Стиль для карточки
 const cardStyle = {
   width: 280,
   height: 470,
@@ -14,8 +13,8 @@ const cardStyle = {
   paddingTop: 5,
   transition: "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
   display: "flex",
-  flexDirection: "column", // чтобы элементы располагались вертикально
-  justifyContent: "center", // центрирование по вертикали
+  flexDirection: "column", 
+  justifyContent: "center", 
   alignItems: "center",
   "&:hover": {
     transform: "scale(1.05)",
@@ -23,7 +22,6 @@ const cardStyle = {
   },
 };
 
-// Стиль для обертки
 const cardMediaStyle = {
   height: 300,
   width: 250,
@@ -32,7 +30,6 @@ const cardMediaStyle = {
   borderTopRightRadius: 8,
 };
 
-// Стиль для кнопки
 const buttonStyle = {
   marginTop: 2,
   backgroundColor: "#ff4081",

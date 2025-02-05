@@ -14,8 +14,8 @@ const cardStyle = {
   paddingTop: 5,
   transition: "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
   display: "flex",
-  flexDirection: "column", // чтобы элементы располагались вертикально
-  justifyContent: "center", // центрирование по вертикали
+  flexDirection: "column", 
+  justifyContent: "center", 
   alignItems: "center",
   "&:hover": {
     transform: "scale(1.05)",
@@ -23,7 +23,6 @@ const cardStyle = {
   },
 };
 
-// Стиль для обертки
 const cardMediaStyle = {
   height: 300,
   width: 250,
