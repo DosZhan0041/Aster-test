@@ -4,6 +4,12 @@ import { useParams } from "react-router-dom";
 import movieDetailStore from "../../app/store/movieDetailStore";
 import { Card, CardContent, CardMedia, Typography, Box } from "@mui/material";
 
+const CardContentStyle = {
+  display: 'flex',
+  flexDirection: "column", 
+  gap: 0.5
+}
+
 const MovieDetailPage: React.FC = () => {
   const { imdbID } = useParams();
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -63,7 +69,7 @@ const MovieDetailPage: React.FC = () => {
           alt={movie.Title}
           sx={{ height: 300, objectFit: "cover" }}
         />
-        <CardContent>
+        <CardContent sx={CardContentStyle}>
           <Typography variant="h4" gutterBottom>
             {movie.Title} ({movie.Year})
           </Typography>
@@ -101,6 +107,7 @@ const MovieDetailPage: React.FC = () => {
             Awards: {movie.Awards || "N/A"}
           </Typography>
           <video
+            style={{ marginTop: 20, borderRadius: 8 }}
             autoPlay
             muted
             ref={videoRef}

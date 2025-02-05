@@ -28,7 +28,7 @@ const cardMediaStyle = {
   width: 250,
   objectFit: "cover",
   borderTopLeftRadius: 8,
-  borderTopRightRadius: 8,
+  borderTopRightRadius: 8
 };
 
 const buttonStyle = {
